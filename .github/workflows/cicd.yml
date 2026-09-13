@@ -73,12 +73,12 @@ jobs:
       # 11. Build Docker Image
       - name: Build Docker Image
         run: |
-          docker build -t manavag-2005/boardgame:latest .
+          docker build -t hackyy11/boardgame:latest .
 
       # 12. Trivy Docker Image Scan
       - name: Trivy Image Scan
         run: |
-          trivy image --format table -o trivy-image-report.html manavag-2005/boardgame:latest
+          trivy image --format table -o trivy-image-report.html hackyy11/boardgame:latest
 
       # 13. Login to Docker Hub
       - name: Login to Docker Hub
@@ -90,7 +90,7 @@ jobs:
       # 14. Push Docker Image
       - name: Push Docker Image
         run: |
-          docker push manavag-2005/boardgame:latest
+          docker push hackyy11/boardgame:latest
 
       # 15. Configure kubectl
       - name: Kubectl Action
